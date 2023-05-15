@@ -1,27 +1,25 @@
 module.exports = {
-    extends: [
-      "plugin:react/recommended",
-      "airbnb",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@next/next/recommended",
-      "turbo",
-      "prettier",
-    ],
-    plugins: ["react", "@typescript-eslint", "react-hooks"],
-    rules: {
-      "@next/next/no-html-link-for-pages": "off",
-      "react/jsx-filename-extension": ["warn", { extensions: [".tsx"] }],
-      "react/react-in-jsx-scope": "off",
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "turbo",
+  ],
+  plugins: ["react", "react-hooks", "prettier", "@typescript-eslint"],
+  rules: {
+    "@next/next/no-html-link-for-pages": "off",
+  },
+  parserOptions: {
+    babelOptions: {
+      presets: [require.resolve("next/babel")],
     },
-    parserOptions: {
-      babelOptions: {
-        presets: [require.resolve("next/babel")],
-      },
+  },
+  settings: {
+    react: {
+      version: "18",
     },
-    settings: {
-      react: {
-        version: "18",
-      },
-    },
-  };
-  
+  },
+};
