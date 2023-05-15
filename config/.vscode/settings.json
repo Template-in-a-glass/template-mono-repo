@@ -23,5 +23,7 @@
     },
     "editor.detectIndentation": false,
     "editor.tabSize": 2,
-    "prettier.configPath": "./packages/eslint-config-custom/prettier.config.js"
+    "prettier.configPath": "./packages/eslint-config-custom/prettier.config.js",
+    "javascript.suggestionActions.enabled": false
   }
+  
