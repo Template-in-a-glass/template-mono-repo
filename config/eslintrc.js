@@ -21,5 +21,5 @@ module.exports = {
       version: "18",
     },
   },
-  ignorePatterns: ["prettier.config.js", "tailwind.config.js"],
+  ignorePatterns: ["prettier.config.js", "tailwind.config.js", "commitlint.config.ts"],
 };
