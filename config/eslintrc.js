@@ -1,25 +1,25 @@
 module.exports = {
   extends: [
-    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "next",
-    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended",
+    "plugin:@next/next/recommended",
     "prettier",
     "turbo",
   ],
-  plugins: ["react", "react-hooks", "prettier", "@typescript-eslint"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["react", "@typescript-eslint", "react-hooks"],
   rules: {
     "@next/next/no-html-link-for-pages": "off",
-  },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
+    "react/react-in-jsx-scope": "off",
   },
   settings: {
+    "import/resolver": {
+      typescript: {},
+    },
     react: {
       version: "18",
     },
   },
+  ignorePatterns: ["prettier.config.js", "tailwind.config.js"],
 };
